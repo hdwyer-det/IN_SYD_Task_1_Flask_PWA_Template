@@ -11,5 +11,9 @@ def index():
    data = dbHandler.listExtension()
    return render_template('/index.html', content=data)
 
+@app.route('/dummy.html', methods=['GET'])
+def dummy():
+   return render_template('/dummy.html')
+
 if __name__ == '__main__':
   app.run(debug=True, host='0.0.0.0', port=5000)
